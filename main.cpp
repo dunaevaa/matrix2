@@ -20,11 +20,11 @@ int main()
 		return 0;
 	}
 	int n[sdv], t[k-sdv];
-	for (i = 0; i < a; i++) {
+	for (i = 0; i < sdv; i++) {
 		n[i] = m[i];
 	}
 	for (i = 0; i < k - sdv; i++) {
-		c[i] = m[i+sdv];
+		t[i] = m[i+sdv];
 	}
 	delete [] m;
 	for (i = 0; i < k - sdv; i++) {
