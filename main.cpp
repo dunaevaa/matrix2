@@ -14,23 +14,23 @@ int main()
 	for (i = 0; i < k; i++) {
 		cin >> m[i];
 	}
-	cin >> z;
-	if (a <= 0){
+	cin >> sdv;
+	if (sdv <= 0){
 		cout << "An error has occurred while reading input data" << endl;
 		return 0;
 	}
-	int n[a], c[k-a];
+	int n[sdv], t[k-sdv];
 	for (i = 0; i < a; i++) {
 		n[i] = m[i];
 	}
-	for (i = 0; i < k - a; i++) {
-		c[i] = m[i+a];
+	for (i = 0; i < k - sdv; i++) {
+		c[i] = m[i+sdv];
 	}
 	delete [] m;
-	for (i = 0; i < k - a; i++) {
-		cout << c[i] << " ";
+	for (i = 0; i < k - sdv; i++) {
+		cout << t[i] << " ";
 	}
-	for (i = 0; i < a; i++) {
+	for (i = 0; i < sdv; i++) {
 		cout << n[i] << " ";
 	}
 	return 0;
