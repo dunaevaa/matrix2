@@ -10,28 +10,28 @@ int main()
 	cout << "An error has occurred while reading input data" << endl;
 		return 0;
 	}
-	int *m = new int[k];
+	int *matrix = new int[k];
 	for (i = 0; i < k; i++) {
-		cin >> m[i];
+		cin >> matrix[i];
 	}
 	cin >> sdv;
 	if (sdv <= 0){
 		cout << "An error has occurred while reading input data" << endl;
 		return 0;
 	}
-	int n[sdv], t[k-sdv];
+	int left[sdv], right[k-sdv];
 	for (i = 0; i < sdv; i++) {
-		n[i] = m[i];
+		left[i] = matrix[i];
 	}
 	for (i = 0; i < k - sdv; i++) {
-		t[i] = m[i+sdv];
+		right[i] = m[i+sdv];
 	}
-	delete [] m;
+	delete [] matrix;
 	for (i = 0; i < k - sdv; i++) {
-		cout << t[i] << " ";
+		cout << right[i] << " ";
 	}
 	for (i = 0; i < sdv; i++) {
-		cout << n[i] << " ";
+		cout << left[i] << " ";
 	}
 	return 0;
 }
